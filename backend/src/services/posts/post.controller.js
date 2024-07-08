@@ -5,8 +5,7 @@ import { Post } from "../../schema/post.schema.js";
 
 const createPostController = async (req, res) => {
   try {
-    const { tweet } = req.body
-    const post = req.file?.filename
+    const { tweet,post } = req.body
     const postedBy = req.user.email
     const firstName = req.user.firstName
     const lastName = req.user.lastName
